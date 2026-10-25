@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nur Aisyah — Information System Student</title>
+  <meta name="description" content="Portfolio of Nur Aisyah (Isya) — Information System Tanjungpura University">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#2563eb',
+              yellow: '#facc15',
+              dark: '#121316',
+              binder: '#f5f4ef',
+              charcoal: '#18181b',
+              paper: '#f3efe8',
+              kraft: '#e4d3b8',
+              tape: 'rgba(255, 255, 255, 0.45)',
+              darktape: 'rgba(24, 24, 27, 0.85)'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Italiana"', '"Playfair Display"', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            hand: ['"Caveat"', 'cursive'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'binder': '0 30px 80px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+            'page': '0 10px 35px -5px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0,0,0,0.3)',
+            'polaroid': '0 8px 24px -4px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0,0,0,0.2)',
+            'sticky': '2px 4px 14px rgba(0, 0, 0, 0.22)',
+            'ring': 'inset 2px 0 4px rgba(255,255,255,0.7), inset -2px 0 4px rgba(0,0,0,0.6), 2px 6px 12px rgba(0,0,0,0.5)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Custom Styling for Realism & Polish */
+    body {
+      background-color: #0d0e12;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(45, 48, 58, 0.5) 0%, transparent 70%),
+        radial-gradient(circle at 80% 80%, rgba(30, 33, 40, 0.4) 0%, transparent 60%);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Stitched Leather Edge */
+    .leather-stitch {
+      border: 2px dashed #cfc9bb;
+      box-shadow: inset 0 0 0 4px #faf8f5, inset 0 0 15px rgba(0,0,0,0.08);
+    }
+
+    /* Washi & Masking Tapes */
+    .washi-tape-dark {
+      background: rgba(20, 20, 22, 0.88);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      clip-path: polygon(3% 0%, 97% 2%, 100% 98%, 0% 95%);
+    }
+
+    .washi-tape-clear {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(4px);
+      border-left: 1px dashed rgba(255,255,255,0.6);
+      border-right: 1px dashed rgba(255,255,255,0.6);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+
+    .ripped-tape-badge {
+      background: #dfdacd;
+      color: #1f1f23;
+      clip-path: polygon(
+        0% 8%, 4% 0%, 96% 2%, 100% 12%, 
+        98% 88%, 94% 100%, 3% 96%, 0% 90%
+      );
+      box-shadow: 1px 2px 6px rgba(0,0,0,0.18);
+    }
+
+    /* Metallic Chrome Rings */
+    .chrome-ring {
+      background: linear-gradient(90deg, 
+        #52565e 0%, 
+        #9ca3af 20%, 
+        #ffffff 45%, 
+        #f3f4f6 55%, 
+        #9ca3af 75%, 
+        #374151 100%
+      );
+      box-shadow: 
+        inset 0 2px 3px rgba(255,255,255,0.8),
+        inset 0 -2px 3px rgba(0,0,0,0.6),
+        4px 8px 12px rgba(0,0,0,0.6);
+      border-radius: 9999px;
+    }
+
+    .punch-hole {
+      background: #090a0d;
+      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.9), 0 1px 1px rgba(255,255,255,0.2);
+      border-radius: 50%;
+    }
+
+    /* Handwritten Text Highlights */
+    .hand-annotation {
+      font-family: 'Caveat', cursive;
+      letter-spacing: 0.02em;
+    }
+
+    /* Yellow Circle Sketch SVG animation */
+    .sketch-circle {
+      stroke-dasharray: 600;
+      stroke-dashoffset: 0;
+      animation: drawCircle 1.2s ease-out forwards;
+    }
+
+    @keyframes drawCircle {
+      from { stroke-dashoffset: 600; }
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0d0e12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3f3f46;
+    }
+
+    /* Printable Styles */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-break {
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body class="text-zinc-100 min-h-screen antialiased selection:bg-brand-blue selection:text-white pb-24">
+
+  <!-- Top Navigation Header (Behance / Showcase Style Bar) -->
+  <header class="no-print sticky top-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/80 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <!-- Left: Behance Logo & Project Title -->
+      <div class="flex items-center gap-4">
+        <a href="#cover" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 rounded-lg bg-white text-black font-extrabold flex items-center justify-center tracking-tighter text-base shadow-sm group-hover:scale-105 transition-transform">
+            Bē
+          </div>
+          <div>
+            <h1 class="font-bold text-sm text-zinc-100 tracking-wide group-hover:text-blue-400 transition-colors">Nur Aisyah</h1>
+            <p class="text-[11px] text-zinc-400 font-medium">Portofolio</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Center: Quick Section Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-zinc-900/90 p-1.5 rounded-full border border-zinc-800 text-xs font-medium">
+        <a href="#cover" class="px-3.5 py-1.5 rounded-full hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all">01 Binder</a>
+        <a href="#about" class="px-3.5 py-1.5 rounded-full hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all">02 Greetings</a>
+        <a href="#resume" class="px-3.5 py-1.5 rounded-full hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all">03 Experience</a>
+        <a href="#works" class="px-3.5 py-1.5 rounded-full hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all">04 Works</a>
+      </nav>
+
+      <!-- Right: Action Buttons -->
+      <div class="flex items-center gap-2.5">
+        <!-- Sound Effect Toggle -->
+        <button id="soundToggle" onclick="toggleSound()" title="Toggle Paper Sounds" class="p-2 rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-yellow-400 border border-zinc-800 transition-all flex items-center gap-1.5 text-xs">
+          <svg id="soundIconOn" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          </svg>
+          <span class="hidden sm:inline text-[11px] font-mono">SFX: ON</span>
+        </button>
+
+        <!-- Behance App / Hire Pill Button -->
+        <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs px-4 py-2 rounded-full shadow-lg shadow-blue-600/30 transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5">
+          <span>Get in Touch</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-5xl mx-auto px-3 sm:px-6 pt-6 sm:pt-10 space-y-16">
+
+    <!-- ========================================== -->
+    <!-- SECTION 1: THE REALISTIC BINDER / PORTFOLIO COVER -->
+    <!-- ========================================== -->
+    <section id="cover" class="relative group transition-all duration-500">
+      
+      <!-- Binder Outer Case (White / Cream Leather Planner) -->
+      <div class="relative bg-[#f7f6f2] rounded-3xl sm:rounded-[36px] p-3 sm:p-7 shadow-binder border border-stone-200/90 transition-transform duration-500">
+        
+        <!-- Subtle Leather Stitch Detail along the rim -->
+        <div class="absolute inset-2 sm:inset-3 rounded-2xl sm:rounded-[28px] pointer-events-none leather-stitch"></div>
+
+        <!-- Leather Snap Clasp & Button on Right Side -->
+        <div class="hidden lg:flex absolute -right-6 top-1/2 -translate-y-1/2 flex-col items-center z-30 drop-shadow-xl">
+          <div class="w-14 h-16 bg-[#eae7df] rounded-r-2xl border-2 border-l-0 border-[#d0cac0] flex items-center justify-center shadow-lg relative">
+            <!-- Stitched line -->
+            <div class="absolute inset-1 border-r border-t border-b border-dashed border-[#b8b0a2] rounded-r-xl"></div>
+            <!-- Metal snap button -->
+            <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-zinc-400 via-zinc-100 to-zinc-400 border border-zinc-500 shadow-inner flex items-center justify-center">
+              <div class="w-3 h-3 rounded-full bg-zinc-300 shadow-sm border border-zinc-400"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inner Planner Body -->
+        <div class="relative flex flex-col md:flex-row rounded-xl sm:rounded-2xl overflow-hidden bg-[#18181c] border border-zinc-800 shadow-2xl">
+          
+          <!-- Left Spine Area with Punch Holes & Binder Rings (Center / Left Divider) -->
+          <div class="hidden md:flex absolute left-[48%] top-0 bottom-0 -translate-x-1/2 w-12 z-20 flex-col justify-around items-center pointer-events-none py-10">
+            <!-- 6 Realistic Metallic Chrome Rings with Hole Punches -->
+            <div class="relative w-full flex items-center justify-center my-2">
+              <div class="punch-hole w-4 h-4 absolute left-1"></div>
+              <div class="chrome-ring w-10 h-3.5 z-10 rotate-[-4deg]"></div>
+              <div class="punch-hole w-4 h-4 absolute right-1"></div>
+            </div>
+            <div class="relative w-full flex items-center justify-center my-2">
+              <div class="punch-hole w-4 h-4 absolute left-1"></div>
+              <div class="chrome-ring w-10 h-3.5 z-10 rotate-[-4deg]"></div>
+              <div class="punch-hole w-4 h-4 absolute right-1"></div>
+            </div>
+            <div class="relative w-full flex items-center justify-center my-2">
+              <div class="punch-hole w-4 h-4 absolute left-1"></div>
+              <div class="chrome-ring w-10 h-3.5 z-10 rotate-[-4deg]"></div>
+              <div class="punch-hole w-4 h-4 absolute right-1"></div>
+            </div>
+            <div class="relative w-full flex items-center justify-center my-2">
+              <div class="punch-hole w-4 h-4 absolute left-1"></div>
+              <div class="chrome-ring w-10 h-3.5 z-10 rotate-[-4deg]"></div>
+              <div class="punch-hole w-4 h-4 absolute right-1"></div>
+            </div>
+            <div class="relative w-full flex items-center justify-center my-2">
+              <div class="punch-hole w-4 h-4 absolute left-1"></div>
+              <div class="chrome-ring w-10 h-3.5 z-10 rotate-[-4deg]"></div>
+              <div class="punch-hole w-4 h-4 absolute right-1"></div>
+            </div>
+            <div class="relative w-full flex items-center justify-center my-2">
+              <div class="punch-hole w-4 h-4 absolute left-1"></div>
+              <div class="chrome-ring w-10 h-3.5 z-10 rotate-[-4deg]"></div>
+              <div class="punch-hole w-4 h-4 absolute right-1"></div>
+            </div>
+          </div>
+
+          <!-- Left Page Content -->
+          <div class="w-full md:w-1/2 p-6 sm:p-10 flex flex-col justify-between relative z-10 border-b md:border-b-0 md:border-r border-zinc-800/80 bg-gradient-to-b from-zinc-900 via-[#161619] to-[#121215]">
+            
+            <!-- Top Section: Polaroid Taped with Black Tape -->
+            <div class="relative self-start mb-6 group/polaroid">
+              <!-- Black Tape strip -->
+              <div class="washi-tape-dark absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 z-20 rotate-[-2deg]"></div>
+              
+              <!-- Mini Polaroid Card -->
+              <div class="bg-zinc-900 border border-zinc-700/80 p-2 pb-3 rounded shadow-polaroid rotate-[-4deg] hover:rotate-0 transition-transform duration-300 w-36 sm:w-44 cursor-pointer" onclick="openLightbox('assets/workspace.jpg', 'Annisa Rizka at work')">
+                <div class="aspect-square bg-zinc-800 overflow-hidden rounded-sm relative">
+                  <img src="NUR AISYAH.jpg" alt="Annisa working in studio" class="w-full h-full object-cover grayscale contrast-125 group-hover/polaroid:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'">
+                  <div class="absolute inset-0 bg-black/10"></div>
+                </div>
+                <p class="font-hand text-center text-zinc-300 text-sm sm:text-base mt-1.5 font-semibold tracking-wider">Isya</p>
+              </div>
+            </div>
+
+            <!-- Middle Section: Hero Typography -->
+            <div class="my-6 space-y-1">
+              <!-- Junior ART DIRECTOR Pill Badge -->
+              <div class="inline-flex items-center gap-1.5 bg-blue-600 text-white px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider shadow-md shadow-blue-600/30 mb-2">
+                <span class="font-light italic lowercase">UNIVERSITAS</span>
+                <span class="font-black tracking-widest">TANJUNGPURA</span>
+              </div>
+
+              <!-- "Port folio" Headline -->
+              <div class="relative">
+                <h2 class="text-5xl sm:text-7xl font-serif font-black tracking-tight text-white leading-none">
+                  Porto<span class="font-cormorant font-normal italic lowercase -ml-1 text-zinc-100">folio</span>
+                </h2>
+              </div>
+
+              <!-- CREATIVE DESIGNER Subtitle with Underline -->
+              <div class="pt-2">
+                <p class="text-xs sm:text-sm font-bold tracking-[0.25em] text-zinc-200 uppercase pb-1 border-b border-zinc-400/60 inline-block">
+                  Information System 
+                </p>
+              </div>
+            </div>
+
+            <!-- Bottom Left: Kraft Paper Sticky Note with Socials -->
+            <div class="relative mt-8 self-start group/note">
+              <!-- Frosty Washi Tape on top -->
+              <div class="washi-tape-clear absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 z-20 rotate-1"></div>
+
+              <!-- Sticky Note Card -->
+              <div class="bg-[#ebd9bd] text-zinc-800 p-4 sm:p-5 rounded shadow-sticky rotate-[-1deg] text-xs font-mono space-y-2 border border-[#d6c1a2] hover:rotate-0 transition-transform duration-300 max-w-[280px]">
+                <div class="flex items-center justify-between pb-1 border-b border-amber-900/10">
+                  <span class="font-hand font-bold text-amber-900 text-sm">Direct Contact</span>
+                  <span class="text-[10px] text-amber-800/60 uppercase">tap to copy</span>
+                </div>
+                
+                <!-- Email -->
+                <button onclick="copyToClipboard('h1101261067@student.untan.ac.id', this)" class="w-full text-left flex items-center gap-2 hover:text-blue-700 transition-colors group/item py-0.5">
+                  <svg class="w-3.5 h-3.5 text-amber-900 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <span class="truncate">h1101261067@student.untan.ac.id</span>
+                </button>
+
+                <!-- Instagram -->
+                <button onclick="copyToClipboard('nraisyyyaaa', this)" class="w-full text-left flex items-center gap-2 hover:text-blue-700 transition-colors group/item py-0.5">
+                  <svg class="w-3.5 h-3.5 text-amber-900 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.171 3-3.455 0-5.555-2.529-5.555-5.908 0-3.662 2.37-6.092 5.753-6.092 3.655 0 5.405 2.593 5.127 6.27h-8.083c.125 1.767 1.341 2.871 2.923 2.871 1.488 0 2.327-.798 2.673-1.609l2.333 1.468zm-7.667-4.484h5.279c-.118-1.579-1.077-2.458-2.584-2.458-1.554 0-2.569.879-2.695 2.458zm-11.059-8.516h-5v16h5.819c3.084 0 5.181-1.637 5.181-4.717 0-1.782-1.026-3.238-2.664-3.791 1.291-.531 2.083-1.781 2.083-3.344 0-2.686-1.956-4.148-5.419-4.148zm-2.001 6.375v-3.75h2.464c1.233 0 2.019.531 2.019 1.838 0 1.346-.786 1.912-2.019 1.912h-2.464zm0 6.625v-4.125h2.646c1.378 0 2.247.579 2.247 2.023 0 1.492-.869 2.102-2.247 2.102h-2.646z"/></svg>
+                  <span class="truncate">nraisyyyaaa</span>
+                </button>
+
+                <!-- Facebook -->
+                <button onclick="copyToClipboard('Nur Aisyah', this)" class="w-full text-left flex items-center gap-2 hover:text-blue-700 transition-colors group/item py-0.5">
+                  <svg class="w-3.5 h-3.5 text-amber-900 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span class="truncate">Nur Aisyah</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Page Content (Collage & Magazine Cutout) -->
+          <div class="w-full md:w-1/2 p-6 sm:p-10 flex flex-col justify-between items-center relative z-10 bg-gradient-to-b from-[#1c1c20] to-[#141417]">
+            
+            <!-- Top Right: Tilted Magazine Cover Card -->
+            <div class="relative mt-2 sm:mt-4 group/mag cursor-pointer" onclick="openLightbox('assets/portrait.jpg', 'Creative Designer / Art Director — Annisa')">
+              
+              <!-- Subtle Paper Clip Graphic at top -->
+              <div class="absolute -top-3 right-6 z-20 w-4 h-9 border-2 border-zinc-400 rounded-full opacity-70"></div>
+
+              <!-- Magazine Cutout Card -->
+              <div class="bg-[#f8f7f4] text-zinc-900 p-4 sm:p-5 rounded-md shadow-2xl rotate-2 group-hover/mag:rotate-0 transition-transform duration-500 max-w-[260px] sm:max-w-[310px] border border-stone-300">
+                
+                <!-- Magazine Masthead Header -->
+                <div class="text-center pb-2 border-b border-stone-200">
+                  <p class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 leading-none">NUR AISYAH</p>
+                  <p class="font-serif italic text-lg sm:text-xl text-zinc-700 leading-none -mt-1">H1101261067</p>
+                  <!-- Minimal arch wireframe graphic -->
+                  <div class="w-12 h-2 border-t border-zinc-400 mx-auto mt-1 rounded-t-full"></div>
+                </div>
+
+                <!-- Black and White Portrait Image -->
+                <div class="my-3 overflow-hidden bg-zinc-200 aspect-[3/4] relative rounded-sm shadow-inner">
+                  <img src="NUR AISYAH.jpg" alt="Creative Designer portrait" class="w-full h-full object-cover  contrast-110 group-hover/mag:scale-105 transition-transform duration-700" onerror="this.src=''">
+                </div>
+
+                <!-- Footer Serif Title -->
+                <div class="text-center pt-1">
+                  <h3 class="font-serif text-lg sm:text-xl font-bold tracking-tight text-zinc-900">Isya</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Right Handwritten Quote -->
+            <div class="self-end mt-8 text-right pr-2">
+              <p class="font-hand text-zinc-300 text-lg sm:text-2xl leading-snug tracking-wide">
+                <br> If
+                it meant to be<br>
+                it'll be.
+              </p>
+            </div>
+
+            <!-- Index Tabs Protruding on Right Edge (Like Real Planner Dividers) -->
+            <div class="hidden lg:flex absolute -right-8 top-12 flex-col gap-2.5 z-20">
+              <a href="#cover" class="w-10 h-10 bg-zinc-950 text-white hover:bg-blue-600 rounded-r-lg border border-l-0 border-zinc-700 flex items-center justify-center text-[10px] font-bold shadow-md hover:translate-x-1 transition-all" title="Section 01: Cover">
+                01
+              </a>
+              <a href="#about" class="w-10 h-10 bg-zinc-900 text-zinc-400 hover:text-white hover:bg-blue-600 rounded-r-lg border border-l-0 border-zinc-700 flex items-center justify-center text-[10px] font-bold shadow-md hover:translate-x-1 transition-all" title="Section 02: Greetings">
+                02
+              </a>
+              <a href="#resume" class="w-10 h-10 bg-zinc-900 text-zinc-400 hover:text-white hover:bg-blue-600 rounded-r-lg border border-l-0 border-zinc-700 flex items-center justify-center text-[10px] font-bold shadow-md hover:translate-x-1 transition-all" title="Section 03: Experience">
+                03
+              </a>
+              <a href="#works" class="w-10 h-10 bg-zinc-900 text-zinc-400 hover:text-white hover:bg-blue-600 rounded-r-lg border border-l-0 border-zinc-700 flex items-center justify-center text-[10px] font-bold shadow-md hover:translate-x-1 transition-all" title="Section 04: Works">
+                04
+              </a>
+              <a href="#contact" class="w-10 h-10 bg-zinc-900 text-zinc-400 hover:text-white hover:bg-blue-600 rounded-r-lg border border-l-0 border-zinc-700 flex items-center justify-center text-[10px] font-bold shadow-md hover:translate-x-1 transition-all" title="Section 05: Contact">
+                05
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 2: GREETINGS / ABOUT SPREAD -->
+    <!-- ========================================== -->
+    <section id="about" class="relative group transition-all duration-500">
+      
+      <!-- Studio Dark Frame with Vignette Gradient -->
+      <div class="relative bg-gradient-to-br from-[#1a1b1e] via-[#141518] to-[#0e0f11] rounded-2xl sm:rounded-3xl p-6 sm:p-12 border border-zinc-800 shadow-binder overflow-hidden">
+        
+        <!-- Subtle Top Lighting Vignette -->
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-48 bg-gradient-to-b from-zinc-700/20 to-transparent blur-3xl pointer-events-none"></div>
+
+        <!-- Top Editorial Header Bar -->
+        <div class="flex items-center justify-between pb-6 sm:pb-8 border-b border-zinc-800/80 text-xs sm:text-sm tracking-widest text-zinc-400 uppercase font-medium">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            <span class="text-zinc-200 font-semibold">Greetings</span>
+          </div>
+          <div>
+            <span class="text-zinc-400">SISFO</span>
+            <span class="mx-2 text-zinc-600">|</span>
+            <span class="text-zinc-400">UNTAN</span>
+          </div>
+        </div>
+
+        <!-- Content Grid: Left Card Mockup + Right Bio -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-12 pt-8 sm:pt-12 items-center">
+          
+          <!-- Left Column: Magazine Cover Cutout with Name Subtitle -->
+          <div class="md:col-span-5 flex flex-col items-center">
+            
+            <div class="relative group/cutout cursor-pointer" onclick="openLightbox('assets/portrait.jpg', 'Annisa Rizka Liliandari — Creative Designer')">
+              
+              <!-- Subtle Shadow Base -->
+              <div class="absolute -inset-2 bg-gradient-to-tr from-black/80 to-transparent blur-xl rounded-lg"></div>
+
+              <!-- Magazine Cover -->
+              <div class="relative bg-[#f8f7f4] text-zinc-900 p-5 sm:p-6 rounded-md shadow-2xl rotate-[-2deg] group-hover/cutout:rotate-0 transition-transform duration-500 max-w-[280px] sm:max-w-[320px] border border-stone-200">
+                
+                <!-- Magazine Masthead -->
+                <div class="text-center pb-3 border-b border-stone-200">
+                  <h4 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 leading-none">NUR AISYAH</h4>
+                  <h4 class="font-serif italic text-xl sm:text-2xl text-zinc-700 leading-none -mt-1">H1101261067</h4>
+                  <!-- Geometric Arched Line Drawing -->
+                  <svg class="w-16 h-3 mx-auto mt-1.5 text-zinc-500" viewBox="0 0 60 10" fill="none" stroke="currentColor">
+                    <path d="M2 9C15 2 45 2 58 9" stroke-width="1.2"/>
+                  </svg>
+                </div>
+
+                <!-- B&W Portrait Photo -->
+                <div class="my-4 overflow-hidden bg-zinc-200 aspect-[3/4] relative rounded-sm shadow-inner">
+                  <img src="NUR AISYAH.jpg" alt="ISYA portrait" class="w-full h-full object-cover grayscale contrast-110 group-hover/cutout:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80'">
+                </div>
+
+                <!-- Art Director Footer -->
+                <div class="text-center pt-1">
+                  <p class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-zinc-900">ISYA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Small Name Underneath Card -->
+            <p class="font-serif italic text-zinc-400 text-xs sm:text-sm mt-4 tracking-wide">
+        
+            </p>
+          </div>
+
+          <!-- Right Column: Greetings Typography & Detailed Bio -->
+          <div class="md:col-span-7 space-y-6">
+            
+            <!-- Greetings & Name Heading with Yellow Doodle -->
+            <div>
+              <p class="font-hand text-yellow-300 text-2xl sm:text-3xl font-semibold -mb-2">Hi, I'm</p>
+              
+              <!-- Name with Hand-drawn Doodle Circle on "Annisa" -->
+              <div class="relative inline-block mt-1">
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-white tracking-normal font-normal">
+                  <span class="relative inline-block px-2">
+                    Nur
+                    <!-- Yellow Hand-drawn Circle Sketch SVG -->
+                    <svg class="absolute -inset-x-3 -inset-y-2 w-[calc(100%+24px)] h-[calc(100%+16px)] pointer-events-none text-yellow-400" viewBox="0 0 200 80" fill="none">
+                      <path d="M 25 40 C 20 18, 100 10, 175 25 C 195 32, 195 60, 160 70 C 110 82, 30 75, 18 52 C 12 35, 75 20, 150 25" 
+                            stroke="currentColor" 
+                            stroke-width="2.5" 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round"
+                            class="sketch-circle" />
+                    </svg>
+                  </span>
+                  Aisyah
+                </h2>
+
+                <!-- Playful Arrow & "call me anni!" note -->
+                <div class="flex items-center gap-1.5 mt-1 sm:mt-2 -ml-2 text-yellow-300">
+                  <svg class="w-8 h-8 rotate-12 -scale-y-100" viewBox="0 0 50 50" fill="none" stroke="currentColor">
+                    <path d="M 38 12 C 25 10, 12 20, 14 36 M 14 36 L 8 28 M 14 36 L 22 30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="font-hand text-lg sm:text-xl font-bold tracking-wider">call me isya!</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bio Paragraphs (Exact matching copy from reference image) -->
+            <div class="space-y-4 text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
+              <p class="font-normal text-zinc-100">
+                Mahasiswa Baru dari prodi Sistem Informasi Fakultas Matematika dan Ilmu pengetahuan Alam.
+              </p>
+              
+              <p>
+                Aku memiliki ketertarikan pada dunia teknologi, kreativitas dan bagaimana keduanya dapat berpadu untuk menciptakan sesuatu yang bermakna.
+              </p>
+
+              <p>
+                Aku senang menuangkan pikiran dalam bentuk visual maupun tulisan, mengeksplorasi berbagai ide, dan melihat sesuatu dari prspektif yang berbeda, bagiku selalu ada hal baru untuk dipelajari dan kemungkinan baru untuk dijelajahi. <strong class="font-medium text-zinc-100 underline decoration-zinc-500 underline-offset-4"></strong>
+              </p>
+
+              <p class="text-zinc-200">
+                Terus belajar, terus bertumbuh, dan terus menemukal hal baru. <strong class="font-medium text-zinc-100 underline decoration-zinc-500 underline-offset-4">If it meant to be, it'll be.</strong>
+              </p>
+            </div>
+
+            <!-- Footer Year Stamp -->
+            <div class="pt-6 flex justify-end">
+              <span class="font-serif italic text-zinc-500 text-sm tracking-widest">2026</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 3: EDUCATIONAL BACKGROUND & RESUME -->
+    <!-- ========================================== -->
+    <section id="resume" class="relative group transition-all duration-500">
+      
+      <!-- Vintage Editorial Paper Container (Warm Off-White / Cream Tone) -->
+      <div class="relative bg-[#f4f1ea] text-zinc-900 rounded-2xl sm:rounded-3xl p-6 sm:p-12 border border-[#dedad0] shadow-binder overflow-hidden">
+        
+        <!-- Paper Grain & Ring Holes Shadow Illusion along Left/Right -->
+        <div class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-stone-400/10 to-transparent pointer-events-none"></div>
+
+        <!-- Top Header Bar with Ripped Tape Badge -->
+        <div class="flex items-center justify-between pb-6 sm:pb-8 border-b border-stone-300 text-xs sm:text-sm font-medium">
+          
+          <!-- Ripped Masking Tape Badge: "Educational Background" -->
+          <div class="ripped-tape-badge px-4 py-1.5 font-bold tracking-wide uppercase text-xs shadow-sm rotate-[-1deg]">
+            Educational Background
+          </div>
+
+          <!-- Right Editorial Tagline -->
+          <div class="text-stone-600 font-serif italic text-xs sm:text-sm tracking-wider">
+            SISFO | UNTAN
+          </div>
+        </div>
+
+        <!-- 3-Column Editorial Grid Layout (Exact match from photo) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 pt-8 sm:pt-12">
+          
+          <!-- ==================================== -->
+          <!-- COLUMN 1: EDUCATION & ORGANIZATION -->
+          <!-- ==================================== -->
+          <div class="space-y-8 flex flex-col justify-between">
+            
+            <div class="space-y-6">
+              <!-- Education Header -->
+              <div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 pb-2">Education</h3>
+                
+                <div class="space-y-4 pt-1">
+                  <!-- Master Degree -->
+                  <div class="border-l-2 border-stone-400 pl-3">
+                    <h4 class="font-bold text-sm sm:text-base text-zinc-900">Teknik Komputer Jaringan dan Telekomunikasi</h4>
+                    <p class="text-xs sm:text-sm text-stone-700 font-medium">SMK NEGERI 1 SAMBAS</p>
+                    <p class="text-xs text-stone-500 italic mt-0.5">2023 - 2026</p>
+                  </div>
+
+                  <!-- Bachelor Degree -->
+                  <div class="border-l-2 border-stone-400 pl-3">
+                    <h4 class="font-bold text-sm sm:text-base text-zinc-900 leading-snug">
+                      SMP NEGERI 1 SAMBAS<b></b>
+                    </h4>
+                    <p class="text-xs sm:text-sm text-stone-700 font-medium"></p>
+                    <div class="flex items-center gap-2 text-xs text-stone-500 mt-0.5">
+                      <span>2020 - 2023</span>
+                      <span>•</span>
+                      <span class="font-semibold text-zinc-900"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                      
+
+              <!-- Organization Header -->
+              <div class="pt-4 border-t border-stone-300">
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 pb-2">Organization</h3>
+                
+                <div class="space-y-4 pt-1">
+                  <!-- OSIS -->
+                  <div class="border-l-2 border-stone-400 pl-3">
+                    <h4 class="font-bold text-xs sm:text-sm text-zinc-900">OSIS</h4>
+                    <p class="text-xs text-stone-700">SMK NEGERI 1 SAMBAS</p>
+                    <p class="text-xs font-semibold text-stone-800 mt-1">SEKRETARIS I</p>
+                    <p class="text-xs text-stone-500 italic">2024-2026</p>
+                  </div>
+                  
+
+            <!-- Bottom Signature / Tag -->
+            <div class="pt-6">
+              <p class="font-hand text-stone-600 text-lg">Nur Aisyah
+            </div>
+
+          </div>
+
+          <!-- ==================================== -->
+          <!-- COLUMN 2: WORKING EXPERIENCES -->
+          <!-- ==================================== -->
+          <div class="space-y-5 border-t md:border-t-0 md:border-l md:border-r border-stone-300 pt-6 md:pt-0 md:px-6">
+            
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 pb-2">Pengalaman</h3>
+
+            <div class="space-y-5 pt-1">
+              
+              <!-- Ideacultura -->
+              <div class="group/exp">
+                <h4 class="font-bold text-sm sm:text-base text-zinc-900 flex items-center justify-between">
+                  <span>Kepanitiaan Riya Scout Camp VI</span>
+                </h4>
+                <p class="text-xs text-stone-500 italic">2025</p>
+                <p class="text-xs sm:text-sm font-semibold text-zinc-800 mt-0.5">Staff Konsumsi</p>
+              </div>
+
+              <!-- 3A Media Network -->
+              <div class="group/exp">
+                <h4 class="font-bold text-sm sm:text-base text-zinc-900">Kepanitiaan Riya Scout Camp V</h4>
+                <p class="text-xs text-stone-500 italic">2024</p>
+                <p class="text-xs sm:text-sm font-semibold text-zinc-800 mt-0.5">Staff Kesehatan</p>
+              </div>
+
+              <!-- Narrative Agency -->
+              <div class="group/exp">
+                <h4 class="font-bold text-sm sm:text-base text-zinc-900">
+                  Kepanitiaan Riya Scout Camp IV
+                  <span class="block text-xs font-normal text-stone-600 italic">2023</span>
+                </h4>
+                <p class="text-xs text-stone-500 italic"></p>
+                <p class="text-xs sm:text-sm font-semibold text-zinc-800 mt-0.5">Staff Kesehatan</p>
+              </div>
+
+              <!-- Visuels Creative Agency -->
+              <div class="group/exp">
+                <h4 class="font-bold text-sm sm:text-base text-zinc-900">National TOEFL Olympic</h4>
+                <p class="text-xs text-stone-500 italic">2025</p>
+                <p class="text-xs sm:text-sm font-semibold text-zinc-800 mt-0.5"></p>
+              </div>
+
+              <div class="group/exp">
+                <h4 class="font-bold text-sm sm:text-base text-zinc-900">National TOEIC Olympic</h4>
+                <p class="text-xs text-stone-500 italic">2025</p>
+                <p class="text-xs sm:text-sm font-semibold text-zinc-800 mt-0.5"></p>
+              </div>
+
+              <!-- Besocial Creative Agency -->
+              <div class="group/exp">
+                <h4 class="font-bold text-sm sm:text-base text-zinc-900">BRENCHMARKING STUDY OSIS</h4>
+                <p class="text-xs text-stone-500 italic">2024</p>
+                <p class="text-xs sm:text-sm font-semibold text-zinc-800 mt-0.5">WITH SMK NEGRI 2 SINGKAWANG</p>
+              </div>
+
+              
+
+            </div>
+
+          </div>
+
+          <!-- ==================================== -->
+          <!-- COLUMN 3: COMPETANCES & ART PRINTS -->
+          <!-- ==================================== -->
+          <div class="space-y-6 flex flex-col justify-between">
+            
+            <div class="space-y-6">
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 pb-2"></h3>
+
+              <!-- Language Proficiency -->
+              <div>
+                <h4 class="font-bold text-xs sm:text-sm text-zinc-900 tracking-wide uppercase text-stone-800 border-b border-stone-300 pb-1">
+                  Language 
+                </h4>
+                <div class="mt-2 space-y-1 text-xs text-stone-700">
+                  <p>Bahasa Indonesia <span class="italic text-stone-500">(Native Speaker)</span></p>
+                  <p>English <span class="italic text-stone-500">(Working Level : Intermediate)</span></p>
+                  <div class="flex gap-4 pt-1 text-stone-600 font-mono text-[11px]">
+                    <span>TOEIC : <strong class="text-zinc-900">590</strong></span>
+                    <span>TOEIC : <strong class="text-zinc-900">760</strong></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skills Grid: Software vs Soft Skills -->
+              <div class="grid grid-cols-2 gap-4">
+                
+                <!-- Software Skills -->
+                <div>
+                  <h4 class="font-bold text-xs text-zinc-900 tracking-wide uppercase border-b border-stone-300 pb-1">
+                    Software Skills
+                  </h4>
+                  <ul class="mt-2 space-y-1 text-xs text-stone-700">
+                    <li>Canva</li>
+                    <li>Capcut</li>
+                    <li>Winbox | Beginner </li>
+                    <li>GitHub | Beginner </li>
+                    <li>VS Code | Beginner </li>
+                    <li>Figma | Beginner </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <!-- Soft Skills & Tools -->
+                <div class="space-y-4">
+                  <div>
+                    <h4 class="font-bold text-xs text-zinc-900 tracking-wide uppercase border-b border-stone-300 pb-1">
+                      Soft Skills
+                    </h4>
+                    <ul class="mt-2 space-y-1 text-xs text-stone-700">
+                      <li>Public Speaking</li>
+                      <li>Critical Thinking</li>
+                      <li>Problem Solving</li>
+                      <li>Communication</li>
+                      <li>Adaptability</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 class="font-bold text-xs text-zinc-900 tracking-wide uppercase border-b border-stone-300 pb-1">
+                      Working Tools
+                    </h4>
+                    <ul class="mt-2 space-y-1 text-xs text-stone-700">
+                      <li>Microsoft Office</li>
+                      <li>Google Workspace</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Bottom Right Corner: Framed Art Poster & Camera Lens Graphic -->
+            <div class="relative pt-4 flex justify-end">
+              <div class="relative group/lens cursor-pointer" onclick="openLightbox('assets/lens.jpg', 'Der Objektiv-Fokus Graphic Exhibition Poster')">
+                <!-- Washi Tape -->
+                <div class="washi-tape-dark absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-4 z-10 rotate-3"></div>
+                
+                <!-- Framed Art Thumbnail -->
+                <div class="w-32 sm:w-36 bg-zinc-900 p-1.5 rounded border border-zinc-700 shadow-xl group-hover/lens:scale-105 transition-transform duration-300 rotate-1">
+                  <div class="aspect-square overflow-hidden bg-black rounded-sm relative">
+                    <img src="assets/lens.jpg" alt="Camera lens graphic poster" class="w-full h-full object-cover grayscale contrast-125">
+                  </div>
+                  <div class="text-[9px] text-center text-zinc-400 font-mono mt-1 tracking-tight truncate">
+                    Der Objektiv-Fokus
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 4: SELECTED WORKS SHOWCASE -->
+    <!-- ========================================== -->
+    <section id="works" class="relative group transition-all duration-500">
+      
+      <div class="bg-[#141519] rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-zinc-800 shadow-binder">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between pb-8 border-b border-zinc-800 gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-400 mb-1">
+              <span>Selected Portfolio</span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white">Dokumentasi Pengalaman</h3>
+          </div>
+          <p class="text-xs text-zinc-400 max-w-sm">
+            
+          </p>
+        </div>
+
+        <!-- Portfolio Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
+          
+          <!-- Project 1 -->
+          <div class="group/card bg-zinc-900/70 border border-zinc-800 hover:border-zinc-600 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 shadow-lg">
+            <div class="aspect-[4/3] bg-zinc-800 overflow-hidden relative cursor-pointer" onclick="openLightbox('assets/portrait.jpg', 'Editorial Fashion Art Direction')">
+              <img src="osis_y.jpg" alt="Editorial Fashion Art Direction" class="w-full h-full object-cover grayscale group-hover/card:grayscale-0 group-hover/card:scale-105 transition-all duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover/card:opacity-40 transition-opacity"></div>
+              <span class="absolute top-3 left-3 bg-zinc-900/90 text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full border border-zinc-700">Organisasi</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-serif font-bold text-lg text-white group-hover/card:text-blue-400 transition-colors">Brenchmarking Study OSIS</h4>
+              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">With SMK Negeri 2 Singkawang </p>
+              <div class="flex items-center justify-between pt-4 mt-4 border-t border-zinc-800/80 text-[11px] text-zinc-500 font-mono">
+                <span>OSIS</span>
+                <span>2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="group/card bg-zinc-900/70 border border-zinc-800 hover:border-zinc-600 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 shadow-lg">
+            <div class="aspect-[4/3] bg-zinc-800 overflow-hidden relative cursor-pointer" onclick="openLightbox('assets/lens.jpg', 'Der Objektiv-Fokus Optical Exhibition')">
+              <img src="pramuka.jpg" alt="Der Objektiv-Fokus" class="w-full h-full object-cover grayscale group-hover/card:grayscale-0 group-hover/card:scale-105 transition-all duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover/card:opacity-40 transition-opacity"></div>
+              <span class="absolute top-3 left-3 bg-zinc-900/90 text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full border border-zinc-700">Pengalaman</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-serif font-bold text-lg text-white group-hover/card:text-blue-400 transition-colors">MC Riya Scout Camp </h4>
+              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">Upacara api unggun</p>
+              <div class="flex items-center justify-between pt-4 mt-4 border-t border-zinc-800/80 text-[11px] text-zinc-500 font-mono">
+                <span>Pramuka</span>
+                <span>2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="group/card bg-zinc-900/70 border border-zinc-800 hover:border-zinc-600 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 shadow-lg sm:col-span-2 lg:col-span-1">
+            <div class="aspect-[4/3] bg-zinc-800 overflow-hidden relative cursor-pointer" onclick="openLightbox('assets/workspace.jpg', 'Social Media Strategy & Campaign')">
+              <img src="photo_6264830763752690998_y.jpg" alt="Social Media Strategy" class="w-full h-full object-cover grayscale group-hover/card:grayscale-0 group-hover/card:scale-105 transition-all duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover/card:opacity-40 transition-opacity"></div>
+              <span class="absolute top-3 left-3 bg-zinc-900/90 text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full border border-zinc-700">English test</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-serif font-bold text-lg text-white group-hover/card:text-blue-400 transition-colors">Toefl & Toeic</h4>
+              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">English test</p>
+              <div class="flex items-center justify-between pt-4 mt-4 border-t border-zinc-800/80 text-[11px] text-zinc-500 font-mono">
+                <span>score</span>
+                <span>2023 & 2025</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 5: CONTACT & FOOTER SPREAD -->
+    <!-- ========================================== -->
+    <section id="contact" class="relative group transition-all duration-500">
+      
+      <div class="bg-gradient-to-tr from-zinc-950 via-zinc-900 to-zinc-950 rounded-2xl sm:rounded-3xl p-6 sm:p-12 border border-zinc-800 shadow-binder text-center relative overflow-hidden">
+        
+        <div class="max-w-2xl mx-auto space-y-6 relative z-10">
+          <span class="inline-flex items-center gap-2 bg-blue-600/20 text-blue-400 text-xs px-3.5 py-1.5 rounded-full font-mono border border-blue-500/30">
+            <span>AVAILABLE FOR OPPORTUNITIES</span>
+          </span>
+
+          <h3 class="font-serif text-3xl sm:text-5xl font-bold text-white">Let's create something extraordinary together.</h3>
+          
+          <p class="text-sm sm:text-base text-zinc-400 font-light">
+            Whether you need creative art direction, branding revamps, or compelling campaign narratives, feel free to reach out.
+          </p>
+
+          <!-- Contact Pills -->
+          <div class="flex flex-wrap items-center justify-center gap-3 pt-4">
+            <!-- Email Button -->
+            <button onclick="copyToClipboard('h1101261067@student.untan.ac.id', this)" class="bg-zinc-800 hover:bg-zinc-700 text-white px-5 py-3 rounded-full text-xs sm:text-sm font-medium border border-zinc-700 transition-all flex items-center gap-2 shadow-lg hover:scale-105 active:scale-95">
+              <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>h1101261067@student.untan.ac.id</span>
+            </button>
+
+            <!-- Behance Link -->
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-3 rounded-full text-xs sm:text-sm font-medium transition-all flex items-center gap-2 shadow-lg shadow-blue-600/30 hover:scale-105 active:scale-95">
+              <span>Behance Profile</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+
+            <!-- Print / Save PDF -->
+            <button onclick="window.print()" class="no-print bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white px-5 py-3 rounded-full text-xs sm:text-sm font-medium border border-zinc-800 transition-all flex items-center gap-2 hover:scale-105 active:scale-95">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+              <span>Print/PDF</span>
+            </button>
+          </div>
+
+          <div class="pt-8 border-t border-zinc-800 text-xs text-zinc-500 flex flex-col sm:flex-row items-center justify-between">
+            <p>© 2026 Nur Aisyah. All Rights Reserved.</p>
+            <p class="font-serif italic mt-2 sm:mt-0">Designed & crafted with Tailwind CSS</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal for Photo Zoom -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="relative max-w-3xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-zinc-400 hover:text-white p-2 rounded-full hover:bg-zinc-800 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="bg-zinc-900 p-2 sm:p-4 rounded-xl border border-zinc-800 shadow-2xl overflow-hidden max-h-[80vh] flex items-center justify-center">
+        <img id="lightboxImg" src="" alt="Zoom preview" class="max-h-[72vh] w-auto object-contain rounded-lg">
+      </div>
+      <p id="lightboxCaption" class="text-sm font-serif italic text-zinc-300 mt-3 text-center"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-zinc-900 border border-zinc-700 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2.5 text-xs font-medium translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+    </div>
+    <span id="toastMsg">Copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript in Single File -->
+  <script>
+    // Audio Synthesizer (Realistic Page Turn SFX using Web Audio API)
+    let audioCtx = null;
+    let soundEnabled = true;
+
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+    }
+
+    function playPaperSound() {
+      if (!soundEnabled) return;
+      try {
+        initAudio();
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+
+        // Generate synthetic paper rustle sound
+        const bufferSize = audioCtx.sampleRate * 0.15; // 150ms
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.35));
+        }
+
+        const noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+
+        // Filter to sound like paper rustle / turn
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(1400, audioCtx.currentTime);
+        filter.Q.setValueAtTime(1.5, audioCtx.currentTime);
+
+        const gainNode = audioCtx.createGain();
+        gainNode.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.14);
+
+        noise.connect(filter);
+        filter.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+
+        noise.start();
+      } catch (e) {
+        console.warn('Audio play restricted or unsupported');
+      }
+    }
+
+    function toggleSound() {
+      soundEnabled = !soundEnabled;
+      const btn = document.getElementById('soundToggle');
+      if (soundEnabled) {
+        btn.innerHTML = `
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          </svg>
+          <span class="hidden sm:inline text-[11px] font-mono">SFX: ON</span>
+        `;
+        showToast('Paper SFX enabled');
+        playPaperSound();
+      } else {
+        btn.innerHTML = `
+          <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+          </svg>
+          <span class="hidden sm:inline text-[11px] font-mono text-zinc-500">SFX: OFF</span>
+        `;
+        showToast('Paper SFX muted');
+      }
+    }
+
+    // Attach paper sound to all section navigation clicks
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        playPaperSound();
+      });
+    });
+
+    // Copy to clipboard helper
+    function copyToClipboard(text, elem) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`Copied: ${text}`);
+        playPaperSound();
+      }).catch(err => {
+        showToast('Failed to copy');
+      });
+    }
+
+    // Toast notification display
+    let toastTimeout;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.innerText = msg;
+      
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3000);
+    }
+
+    // Lightbox modal logic
+    function openLightbox(src, caption) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      
+      img.src = src;
+      cap.innerText = caption || '';
+      
+      lb.classList.remove('opacity-0', 'pointer-events-none');
+      lb.classList.add('opacity-100', 'pointer-events-auto');
+      playPaperSound();
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('opacity-0', 'pointer-events-none');
+      lb.classList.remove('opacity-100', 'pointer-events-auto');
+    }
+
+    // Close lightbox on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
